@@ -2,6 +2,10 @@ use task2::{read_input, CubesBag};
 
 fn main() {
     let lines = read_input();
+    process_part1(lines);
+}
+
+fn process_part1(lines: Vec<String>) {
     let mut sum: u32 = 0;
 
     for (i, line) in lines.iter().enumerate() {
@@ -24,7 +28,7 @@ fn is_game_possible(line: &String) -> bool {
             let (count_string, color) = cube.split_once(" ").unwrap();
             let count = count_string.parse::<i32>().unwrap();
 
-            match color.trim() {
+            match color {
                 "red" => bag.red -= count,
                 "green" => bag.green -= count,
                 "blue" => bag.blue -= count,

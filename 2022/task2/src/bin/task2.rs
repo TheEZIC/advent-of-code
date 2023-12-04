@@ -2,6 +2,10 @@ use task2::{read_input, CubesBag};
 
 fn main() {
     let lines = read_input();
+    process_part2(lines);
+}
+
+fn process_part2(lines: Vec<String>) {
     let mut sum: u32 = 0;
 
     for (i, line) in lines.iter().enumerate() {
