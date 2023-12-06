@@ -1,0 +1,8 @@
+[package]
+name = "task6"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bench = "1.1.0"
+cargo = "0.75.1"
