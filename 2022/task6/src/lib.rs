@@ -25,10 +25,11 @@ pub fn calc_solutions_count(time: &u64, distance: &u64) -> u64  {
     let time = *time;
     let distance = *distance;
 
-    let d: f64 = (time.pow(2) - 4 * distance) as f64;
+    let d: f64 = (time * time - 4 * distance) as f64;
+    let dsq = d.sqrt();
 
-    let x1: f64 = (time as f64 + d.sqrt()) * 0.5;
-    let x2: f64 = (time as f64 - d.sqrt()) * 0.5;
+    let x1: f64 = (time as f64 + dsq) * 0.5;
+    let x2: f64 = (time as f64 - dsq) * 0.5;
 
     let x1_has_precision = x1 != x1.floor();
     let x2_has_precision = x2 != x2.floor();

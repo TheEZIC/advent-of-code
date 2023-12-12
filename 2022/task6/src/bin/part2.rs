@@ -1,7 +1,5 @@
 use task6::{calc_solutions_count, read_input};
 
-
-
 fn main() {
     let lines = read_input();
     process_part2(lines);
